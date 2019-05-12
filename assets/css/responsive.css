@@ -1,0 +1,84 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+ .container {
+	width: 970px;
+}  
+.top_bar_menu {
+	text-align: right;
+	padding: 0px 11px;
+}
+.header_bottom_area {
+	padding: 0px 17px;
+}
+.menu_area {
+	padding: 3px 20px;
+}
+.key_area {
+	padding: 0px 29px;
+}
+.top_newses {
+	padding: 0px 13px;
+}
+.top_news_area span i.fas.fa-chevron-left {
+	left: -6px;
+}
+ .top_news_area span i.fas.fa-chevron-right {
+	right: -6px;
+}
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+    .container{
+        width:750px;
+    }
+.top_news_area span i.fas.fa-chevron-right {
+	right: -18px;
+}
+.top_news_area span i.fas.fa-chevron-left {
+	left: -18px;
+}
+  
+  .border_bottom.main {
+	padding: 0px 36px 21px 36px;
+}
+.border_bottom.main {
+	margin: 0px 25px;
+}
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+ .container{
+    width:300px;
+    }
+.top_news_area span i.fas.fa-chevron-left {
+	top: 17%;
+	left: 14px;
+	z-index:1
+}
+	.top_news_area span i.fas.fa-chevron-right {
+	top: 17%;
+	right: 14px;
+}
+  .border_bottom.main {
+	margin: 0px 39px;
+}
+     
+     
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+    .container{
+    width:450px;
+    }
+        
+     .top_news_area span i.fas.fa-chevron-right {
+	right: -18px;
+}
+.top_news_area span i.fas.fa-chevron-left {
+	left: -18px;
+}
+     
+     
+     
+     
+}

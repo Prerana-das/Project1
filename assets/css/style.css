@@ -1,11 +1,11 @@
-/* Common Css */
+/* Common Css______________________ */
 *{margin:0px;padding:0px;}
 body {
 	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
 }
 a:hover {
-	
+	color: #333;
 	text-decoration: none;
 }
 p{
@@ -76,6 +76,14 @@ img{
 .dropdown_menu li:hover {
 	background-color: #EEF3F6;
 }
+.margin-bottom-20 {
+	margin-bottom: 20px;
+}
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+ul{list-style: none}
+.margin{margin: 0px}
 
 
 /* .main{width:1000px;
@@ -87,7 +95,35 @@ img{
 .common_margin{
 	padding: 37px 0px;
 }
+.blk_btn {
+	padding: 4px 28px;
+	background-color: #0099FF;
+	color: #fff;
+	text-transform: capitalize;
+	border-radius: 2px;
+}
+.blk_btn:hover {
+	color: #fff;
+}
+a.border_btn {font-size: 15px;padding: 12px 40px;display: block;border: 1px solid #21A8E7;text-align: center;margin-top: 16px;/* color: #666; */text-transform: capitalize;}
 
+a.border_btn i {
+    margin-left: 5px;
+    margin-right: 7px;
+}
+.padding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.margin-bottom-100 {
+    margin-bottom: 100px;
+}
+.margin-top-100 {
+    margin-top: 100px;
+}
+.padding-bottom-100 {
+    padding-bottom: 100px;
+}
 /* Start Top Bar Menu Area */
 .top_bar {
 	background-color: #EEE;
@@ -220,6 +256,21 @@ img{
 	font-weight: ;
 	font-style: normal;
 }
+
+.mobile_menu_icon {
+	text-align: right;
+	padding: 10px 27px;
+  }
+  .mobile_menu_icon ul {
+	list-style: none;
+  }
+  .mobile_menu_icon li {
+	position: ;
+	cursor: pointer;
+  }
+  #mobile_menu_open {
+	display: none;
+  }
 /*  End Menu Area Css */
 /* Start Visual Key Area Css */
 .key_area ul li {
@@ -355,7 +406,7 @@ img{
 	margin-bottom: 14px;
 	padding-bottom: 14px;
 }
-.news_body_area_right::before {
+/* .news_body_area_right::before {
 	position: absolute;
 	content: '';
 	top: -50px;
@@ -363,7 +414,7 @@ img{
 	width: 1px;
 	height: 100%;
 	background-color: #ddd;
-}
+} */
 /*  End News Area Css  */
  /* Start News Body Area Css  */
 .news_real_times {
@@ -371,16 +422,37 @@ img{
 }
 .single_news_real_times {
 	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
 }
-.single_news_real_times p {
+.single_news_real_times_pera p {
+	margin: 19px 21px;
+}
+.single_news_real_times p,.single_news_body_area_right_featured_pera p {
 	padding: 13px;
 	font-size: 14px;
 	line-height: 23px;
 }
 .single_news_real_times_pera {
 	border: 1px solid #ddd;
-	padding: 4px 0px;
-	position: relative;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	opacity: .9;
+	transition: .6s;
+	height: 0px;
+	visibility: hidden;
+}
+.single_news_real_times:hover .single_news_real_times_pera {
+	display: block;
+	height: 100%;
+	visibility: visible;
+}
+.single_news_real_times:hover .single_news_real_times_pera {
+	display: block;
+	height: 100%;
 }
 .single_news_real_times p {
 	font-size: 14px;
@@ -388,21 +460,22 @@ img{
 	cursor: pointer;
 }
 .single_news_real_times_pera span {
-	font-size: 11px;
-	color: #a6a5a5;
-	position: absolute;
-	right: 20px;
-	bottom: 53px;
-	font-weight: bold;
-}
-.single_news_real_times_pera ul {
 	text-align: right;
-	margin-right: 11px;
+	font-size: 13px;
+	color: #a6a5a5;
+	margin: 6px 20px;
+	display: block;
 }
-.single_news_real_times_pera ul li {
+.single_news_real_times_pera ul, .single_news_body_area_right_featured_pera ul {
+    text-align: right;
+    margin-right: 11px;
+    list-style: none;
+    margin-bottom: 11px;
+}
+.single_news_real_times_pera ul li,.single_news_body_area_right_featured_pera ul li  {
 	display: inline-block;
 }
-.single_news_real_times_pera ul li a button {
+.single_news_real_times_pera ul li a button,.single_news_body_area_right_featured_pera ul li a button {
 	padding: 10px;
 	border: navajowhite;
 	padding: 4px 11px;
@@ -413,7 +486,7 @@ img{
 	border-radius: 6px;
 	cursor: pointer;
 }
-.single_news_real_times_pera ul li a button:hover {
+.single_news_real_times_pera ul li a button:hover ,.single_news_body_area_right_featured_pera ul li a button:hover {
 	background-color: #00568F;
 }
 .single_news_real_times_top {
@@ -431,6 +504,7 @@ img{
 	height: 106px;
 	object-fit: cover;
 }
+
 .single_news_real_times_top img {
 	width: 36px;
 	height: 36px;
@@ -519,7 +593,7 @@ img{
 
 /* End Footer Area Css */
 
-/* Category Page */
+/* ==============================================Category Page========================================================== */
 .category_area {
 	margin-top: 20px;
 	margin-bottom: 49px;
@@ -537,7 +611,6 @@ img{
 }
 .cat_top {
 	padding: 24px 0px;
-	border-top: 2px solid #000;
 	border-bottom: 2px solid #000;
 }
 .cat_top h3 {
@@ -630,7 +703,7 @@ img{
 	color: #23A4E5;
 	cursor: pointer;
 }
-/* Description Page */
+/* ======================================================Description Page============================================*/
 .single_des_news {
 	padding: 12px 0px;
 	margin-bottom: 12px;
@@ -650,26 +723,2644 @@ img{
 	font-size: 16px;
 	line-height: 28px;
 	text-align: justify;
-}.des_news {
+	overflow: hidden;
+}
+.des_top p span {
+	font-size: 16px;
+	font-size: 15px;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+.des_news {
 	margin-top: 20px;
 }
 .des_details {
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
+    width: 225px;
 }
-.des_details h4 {
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	font-size: 16px;
-	margin: 11px 0px;
+.des_details h4 a {
+	display: block;
+    display: -webkit-box;
+    height: 42px;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
 }
 .des_details h4 a {
 	color: #333;
 }
 .des_details h4 a:hover {
 	text-decoration: underline;
+}
+/* Search Page */
+.cate_title h3 {
+	font-size: 16px;
+	text-transform: capitalize;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #000;
+}
+.search_del strong {
+	margin-right: 9px;
+	line-height: 25px;
+	color: #23A4E5;
+	cursor: pointer;
+}
+.search_del span{
+	color: #B9B9B9;
+    font-size: 13px;
+}
+.search_pera{
+	width:400px;
+  }
+  .search_pera p{
+	display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 43px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	}
+
+/* 	Real Estate Page Start */
+/* Real topbar CSS */
+.community_topbar_area{
+	background-color:#FBFBFB;
+	border-bottom: 1px solid;
+}
+.community_topbar {
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+.community_topbar .logo img {
+    width: 88px;
+}
+.community_topmenu{}
+.community_topmenu li, .community_right_menu li{
+	display: inline-block;
+}
+.community_topmenu li a,.community_right_menu li a{
+	color: #999999;
+	display:inline-block;
+	padding: 6px 8px;
+    border-right: 1px solid #eeeeee;
+    line-height: 14px; 
+    transition:.5s;
+    font-size: 13px;
+}
+.community_topmenu li a:hover{
+	text-decoration:underline;
+}
+.community_header{}
+.sign_up{}
+ul.sign_up a {
+    font-size: 13px;
+    padding: 6px 4px;
+    color: #666666;
+}
+ul.sign_up i {
+    color: #666666;
+    font-size: 13px;
+}
+/* Real midbar CSS*/
+.community_midbar{
+	border-bottom: 1px solid;
+} 
+.midbar_left{}
+.midbar_left a {
+	 margin: 20px 0px;
+}
+a.midbar_title{
+ font-size: 29px;
+ color: #333;
+	 font-weight: bold;
+	 display:inline-block;
+} 
+a.midbar_title span{
+ color: #0099ff;
+}  
+.midbar_right{
+ position: relative;
+}
+.midbar_right img {
+	 padding: 22px 0px;
+}
+span.left_mibar_icon i {
+	 position: absolute;
+	 top: 38%;
+	 left: -12px;
+	 color: #c4bebe;
+	 line-height: 20px;
+	 font-size: 14px;
+	 text-align: center;
+	 cursor: pointer;
+}
+span.right_mibar_icon i {
+	 position: absolute;
+	 top: 37%;
+	 right: -10px;
+	 color: #c4bebe;
+	 font-size: 14px;
+	 line-height: 20px;
+	 text-align: center;
+	 cursor: pointer;
+}
+/* Real midbar CSS */
+.community_midbar{
+	border-bottom: 1px solid;
+} 
+.midbar_left{}
+.midbar_left a {
+	 margin: 20px 0px;
+}
+a.midbar_title{
+ font-size: 29px;
+ color: #333;
+	 font-weight: bold;
+	 display:inline-block;
+} 
+a.midbar_title span{
+ color: #0099ff;
+}  
+.midbar_right{
+ position: relative;
+}
+.midbar_right img {
+	 padding: 22px 0px;
+}
+span.left_mibar_icon i {
+	 position: absolute;
+	 top: 38%;
+	 left: -12px;
+	 color: #c4bebe;
+	 line-height: 20px;
+	 font-size: 14px;
+	 text-align: center;
+	 cursor: pointer;
+}
+span.right_mibar_icon i {
+	 position: absolute;
+	 top: 37%;
+	 right: -10px;
+	 color: #c4bebe;
+	 font-size: 14px;
+	 line-height: 20px;
+	 text-align: center;
+	 cursor: pointer;
+}
+/* Real mainmenu CSS*/
+.community_mainmenu_area{
+	padding:14px 0px;
+	border-bottom: 1px solid;
+}
+ul.community_mainmenu li{
+	 display: inline-block;
+}
+ul.community_mainmenu li a {
+	display: inline-block;
+	color: #333333;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 45px;
+	transition: .5s;
+	text-align: center;
+	padding: 0 8px;
+}
+.ul.community_mainmenu li:first-child a{
+	padding-left: 0px;
+}
+ul.community_mainmenu li a:hover{
+	color:#0099ff;
+}
+.community_mainmenu li> a.active {
+	color:#0099ff;
+}
+.community_search input {
+    border: 2px solid #0099ff;
+    padding: 10px;
+     width: 90%;
+    outline: none;
+    position: relative;
+}
+.community_search i {
+    background-color: #0099ff;
+    color: #fff;
+    height: 46px;
+    line-height: 46px;
+    width: 46px;
+    text-align: center;
+    position: absolute;
+    right: 17px;
+}
+
+h4.properties {
+    font-size: 14px;
+    text-transform: capitalize;
+    word-spacing: 2px;
+    padding: 11px 10px;
+    border: 1px solid #BDBDBD;
+    background-color: #ffffff;
+    color: #000;
+    margin-bottom: 13px;
+}
+h4.properties:hover {
+    background: #DBEDFF;
+}
+ul.real_mainmenu p {
+	padding: 5px 10px;
+	border: 1px solid #0099FF;
+	display: inline-block;
+	text-transform: capitalize;
+	font-size: 14px;
+	background: #d9ecec;
+}
+ul.real_mainmenu p a {
+	color: #000;
+	font-weight: 600;
+}
+.single_real_sale h3 {
+	font-size: 17px;
+	font-weight: 600;
+	word-spacing: 3px;
+	margin-right: 10px;
+	background: #F0F0F0;
+	padding: 7px 9px;
+}
+.single_real_sale h3 a {
+	color: #000;
+}
+.single_real_sale ul a li:last-child {
+	color: tomato;
+}
+.single_real_sale ul {
+	list-style: none;
+}
+.single_real_sale ul a li {
+    font-size: 12px;
+    color: #666;
+    margin-right: 9px;
+    padding: 0px 5px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.single_real_sale img {
+	width: 174px;
+	border: 1px solid #ddd;
+	padding: 11px;
+}
+.real_right table {
+	width: 100%;
+}
+.real_right table ul li {
+	display: inline-block;
+	padding: 6px 9px;
+	width: 220px;
+}
+h4.properties i {
+	margin-left: 5px;
+	font-size: 14px;
+	vertical-align: middle;
+}
+.view {
+	margin-right: 11px;
+}
+.real_right table ul li a {
+	font-size: 13px;
+	color: #666;
+	padding: 4px 7px;
+	border-radius: 4px;
+}
+.real_right table ul li > a.active {
+	background-color: #DBEDFF;
+	color: ;
+}
+.real_right table ul li {
+	display: inline-block;
+	padding: 6px 9px;
+	width: 150px;
+}
+.real_right tr th {
+	text-align: center;
+	font-size: 13px;
+	line-height: 26px;
+	font-weight: 400;
+	color: #000;
+	font-weight: 600;
+	padding: 22px 7px;
+}
+.real_right td p input[type="text"] {
+	width: 108px;
+	border: 1px solid #ccc;
+	height: 22px;
+	position: relative;
+}
+.real_right td p i.fas {
+	line-height: 22px;
+	font-size: 14px;
+	position: absolute;
+	left: 203px;
+	color: #CCCCCC;
+}
+.real_right td {
+	padding: 10px 11px;
+	border: 1px solid #ddd;
+	font-size: 12px;
+}
+.real_right table th {
+	border: 1px solid #ddd;
+	background-color: #FAFAFA;
+}
+.real_right h3 {
+	font-size: 16px;
+	margin: 11px 0px;
+	text-transform: capitalize;
+}
+p.check_box span {
+	vertical-align: inherit;
+	margin-right: 4px;
+	color: #666;
+}
+p.check_box input {
+	margin-right: 3px;
+	vertical-align: text-bottom;
+}
+p.check_box {
+	font-size: 12px;
+	padding: 10px 0px;
+	text-transform: capitalize;
+}
+.check_box span input[type="checkbox"] {
+	margin-right: 5px;
+}
+p.check_box {
+	font-size: 12px;
+	padding: 10px 0px;
+}
+td.title {
+	font-size: 13px;
+	text-align: center;
+	font-weight: 500;
+}
+#price_input {
+	width: 75px;
+	padding: 1px 3px;
+	border: 1px solid #CCC;
+	height: 25px;
+}
+.check_box span {
+	padding: 10px 7px;
+	margin-bottom: -8px;
+	display: inline-block;
+	color: #666;
+}
+.search_word {
+	width: 423px;
+	height: 22px;
+	border: 1px solid #ccc;
+}
+
+.filter_btn ul {
+	list-style: none;
+	text-align: right;
+}
+.filter_btn ul li {
+	display: inline-block;
+	margin-right: 13px;
+}
+.filter_btn ul li {
+	display: inline-block;
+	margin-right: 13px;
+}
+.filter_btn ul li a {
+	padding: 6px 12px;
+	border: 1px solid #ddd;
+	font-size: 12px;
+	color: #666;
+	text-transform: capitalize;
+}
+.filter_btn ul li a i.fas {
+	margin-right: 9px;
+}
+.filter_btn ul li:hover a {
+	background-color: #F0F0F0;
+}
+.filter_btn ul li:nth-child(3n) a {
+	background-color: tomato;
+	color: #fff;
+}
+
+.filter_btn ul li:last-child a {
+	background-color: tomato;
+	color: #fff;
+}
+.filter_btn ul li:last-child {
+	margin-right: 0px;
+}
+
+.premium_table tr th {
+	border: navajowhite;
+}
+.premium_table td {
+	border: navajowhite;
+}
+.premium_table td {
+    width: 106px;
+    padding: 5px 8px;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.premium_table span {
+	display: block;
+	display: -webkit-box;
+	height: 35px;
+	font-size: 14px;
+	line-height: 20px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 12px;
+}
+.premium_table td {
+    width: 106px;
+    padding: 5px 8px;
+    vertical-align: middle;
+}
+
+
+.single_real_sidebar a img {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-right: 11px;
+  }
+  .single_real_sidebar a {
+	padding: 7px 0px;
+	display: block;
+	color: #82909A;
+	font-weight: 503;
+	border-top: 1px solid #82909A;
+	border-left: 1px solid #82909A;
+	border-right: 1px solid #82909A;
+  }
+  .single_real_sidebar a span {
+	font-size: 16px;
+	text-transform: capitalize;
+  }
+  .single_real_sidebar a {
+  }
+  .real_right {
+	padding: 10px 1px;
+  }
+  .real_side_bar {
+	margin-left: 9px;
+  }
+  .single_real_sidebar {
+	margin-top: 12px;
+  }
+  .single_real_sidebar a:last-child {
+	border-bottom: 1px solid #82909A;
+  }
+
+
+
+/* Real pagination CSS_______________ */
+.pagination_area{
+	margin-top: 15px;
+	padding: 25px;
+}
+.pagination_list li {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #999999;
+    display: inline-block;
+    border:1px solid #cccccc;
+    margin-bottom: 10px;
+}
+li.pagination_active{
+	border-color:#777;
+	color:#333;
+	font-weight: 500;
+}
+.pagination_list li i{
+	font-size:12px;
+}
+
+/* Real footer CSS_______________ */
+.footer_area{
+	background-color: #FAFAFA;
+	font-family: 'Noto Sans KR', sans-serif !important;
+}
+.footer_top_area{
+	padding:18px 0px;
+	border-top:1px solid;
+}
+
+/* Real footer left CSS______ */
+.footer_left{}
+.footer_left .community_right_menu {
+    padding: 6px 0px;
+}
+.footer_left .community_right_menu li a{
+	font-weight: normal;
+	transition:.5s;
+}
+.footer_left .community_right_menu li a:hover{
+	text-decoration: underline;
+}
+.footer_left .community_right_menu li:first-child a {
+	padding-left: 0px;
+}
+.footer_col {
+    margin-bottom: 10px;
+}
+.footer_col:last-child{
+	 margin-bottom: 0px;
+}
+h3.footer_h3{
+     font-size: 16px;
+    font-weight: normal;
+    clear: both;
+    margin: 3px 0px;
+    color: #222;
+  }
+
+/* Real footer right CSS______ */
+.footer_right{}
+.footer_right h3{
+	margin-bottom: 15px;
+}
+.footer_right span.title_btn {
+	 margin-bottom: 20px;
+    display: inline-block;
+    width: 200px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    border:none !important;
+}
+.footer_right ul li{
+	padding: 5px 0px;
+}
+.footer_contact li i{
+	width:30px;
+	height:30px;
+	line-height:30px;
+	border-radius: 50%;
+	color:#fff;
+	background-color: #DFDFDF;
+	text-align:center;
+	margin-right: 5px;
+}
+.footer_bottom_area{
+	padding:18px 0px;
+	border-top:1px solid;
+}
+p.copyright{
+	 color: #999;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+
+/* ===================================================sale Realty Page ============================================*/
+
+/* Start Menu Area Css */
+.sale_logo {
+    font-size: 29px;
+    font-style: italic;
+    color: #333333;
+}
+.sale_menu ul {
+	list-style: none;
+	text-align: right;
+}
+.sale_menu ul li {
+    display: inline-block;
+}
+.sale_menu ul li a {
+    padding: 6px 9px;
+    display: block;
+    font-size: 15px;
+    color: #666;
+}
+.sale_menu ul li:hover a {
+    color: #007ACC;
+}
+/* End Menu Area Css */
+/* Start Banner Area Css */
+.sale_bg {
+    background-image: url(../images/realty-banner.png);
+}
+.banner_area {
+    background-size: cover;
+    background-position: top center;
+}
+.banner_sale_cont {
+    text-align: center;
+	padding: 87px 0px;
+}
+.banner_sale_cont p {
+    font-size: 42px;
+	margin-bottom: 9px;
+	position: relative;
+}
+.banner_sale_cont strong {
+    font-size: 38px;
+    font-weight: 600;
+}
+.banner_nav {
+    width: 631px;
+    margin: 0px auto;
+    background: #fff;
+    border-radius: 10px;
+	box-shadow: 0px 2px 11.64px 0.36px rgba(0, 0, 0, 0.54);
+	margin-top: 21px;
+	height: 150px;
+}
+.banner_nav ul {
+    list-style: none;
+    background-color: #0D9EE6;
+}
+.banner_nav ul li {
+    display: inline-block;
+    width: 24%;
+}
+.banner_nav ul li a {
+    padding: 13px 16px;
+    display: block;
+    color: #fff;
+    margin-left: -6px;
+    margin-right: -5px;
+    font-weight: 600;
+}
+.banner_nav ul li a.active {
+    background-color: #fff;
+    color: #3AB0EB;
+}
+.banner_sale_cont p i.fas {
+    position: absolute;
+    right: 78px;
+    font-size: 32px;
+    line-height: 62px;
+    color: #7CC8EE;
+}
+.banner_sale_cont p input {
+    width: 506px;
+	height: 45px;
+	border: 1px solid #DDE4E9;
+}
+.sale_search{}
+.banner_bottom p a {
+    color: #fff;
+    font-weight: 500;
+    word-spacing: 2px;
+    padding: 10px 0px;
+}
+.banner_bottom p a {
+    color: #fff;
+    font-weight: 500;
+    word-spacing: 2px;
+    padding: 10px 0px;
+}
+.banner_bottom {
+	overflow: hidden;
+	background-color: #004E7F;
+    padding: 20px 0px;
+}
+.banner_bottom p {
+    float: left;
+    line-height: 33px;
+}
+.banner_bottom p a {
+    color: #fff;
+    font-weight: 500;
+    word-spacing: 2px;
+    padding: 10px 0px;
+}
+.banner_bottom a.blk_btn {
+    float: right;
+}
+/* End Banner Area Css */
+/* Start Real List Area CSs */
+.real_list_area{}
+.section_title {
+    text-align: center;
+    margin: 29px 0px;
+}
+.section_title h4 {
+    font-size: 33px;
+    text-transform: capitalize;
+}
+.list_area{}
+.single_list {
+    border: 1px solid #ddd;
+}
+.single_list:hover .list_img img {
+    transform: scale(1.1);
+}
+.list_img {
+    position: relative;
+}
+.list_img img {
+    position: relative;
+    transition: .7s;
+}
+
+.list_img:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+	opacity: .3;
+	z-index: 1;
+}
+span.list_imgpera {
+    position: absolute;
+    bottom: 19px;
+    padding: 0px 17px;
+	color: #fff;
+	z-index: 2;
+	width: 100%;
+}
+.list_location {
+    float: left;
+}
+.list_camera {
+    float: right;
+}
+.single_list p{}
+.single_list p a {
+    color: #fff;
+}
+.single_list p a i.fas {
+    margin-right: 5px;
+}
+.list_location{}
+.list_camera{}
+.list_info {
+    padding: 11px 14px;
+}
+.list_info p {
+    font-size: 15px;
+    line-height: 27px;
+    padding: 20p;
+}
+.list_info p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #3C90BE;
+}
+.list_info span {
+    line-height: 33px;
+    color: #3C9EE6;
+}
+.list_ownerdetails {
+    overflow: hidden;
+    padding: 10px 3px;
+    border-top: 1px solid #ddd;
+}
+.list_ownerdetails a{}
+.list_ownerdetails img {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	float: left;
+	line-height: 17px;
+}
+.owner_name a.name {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    /* line-height: 9px; */
+    /* display: flex; */
+	color: #333;
+}
+p.owner_name {
+	margin-left: 11px;
+	font-size: 13px;
+	float: left;
+}
+.list_ownerdetails a p {
+    float: left;
+}
+.ownericon {
+    float: right;
+}
+a.ownericon i {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 35px;
+    color: #8F9EB6;
+}
+a.ownericon i:hover {
+    color: #0099FF;
+}
+.list_share{}
+.list_heart{}
+/* End Real List Area CSs */
+.new_york_area{}
+/* Start Agent Area Css */
+.agent_area{}
+.agent{}
+.single_agent {
+	border: 1px solid #ddd;
+}
+.single_agent a{}
+.single_agent a img{}
+.single_agent a h4 {
+	font-size: 16px;
+	margin-top: 21px;
+	color: #333;
+	padding: 0px 17px;
+}
+.rating {
+	padding: 0px 17px;
+}
+.rating ul {
+	list-style: none;
+	background-color: #2CB33C;
+	color: #fff;
+	padding: 5px 9px;
+	font-size: 13px;
+	width: 65%;
+	border-radius: 7px;
+}
+.rating ul li {
+	display: inline-block;
+}
+.rating ul li span i{}
+.agent_info {
+    padding: 0px 17px 18px 17px;
+}
+.agent_info p {
+    font-size: 14px;
+    color: #333;
+}
+.single_agent a.blk_btn {
+	margin: 0px;
+	display: block;
+	text-align: center;
+	margin: 4px 6px;
+}
+/* End Agent Area Css */
+/* Start Realty Blog Area Css */
+.realty_blog_area{}
+.realty_blog{}
+.single_realty_blog {
+    position: relative;
+    padding-bottom: 46px;
+}
+.single_realty_blog p {
+    font-size: 13px;
+    line-height: 26px;
+    color: #1F1F1F;
+    font-weight: 500;
+    display: block;
+    display: -webkit-box;
+    height: 88px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0px 18px;
+}
+.realty_bloginfo p {
+    font-size: 18px;
+	height: 50px;
+	padding: 0px;
+}
+.realty_bloginfo span {
+    color: #8FADD2;
+    font-size: 13px;
+}
+.single_realty_blog img{}
+.realty_blog_area{}
+.realty_blog_area{}
+a.view_btn:hover {
+    color: #666;
+}
+a.view_btn {
+    text-align: right;
+    font-size: 14px;
+    padding: 10px 12px;
+    position: absolute;
+    bottom: -6px;
+	right: 11px;
+}
+/* End Realty Blog Area Css */
+
+
+/* =================================Sale_realty(2) Page==================================  */
+.banner_map iframe {
+	width: 100%;
+}
+
+.sale_realty2_menu {
+    margin: 18px 0px;
+}
+.sale_realty2_menu ul li {
+    color: #62748F;
+    display: inline-block;
+    font-size: 13px;
+}
+.sale_realty2_menu ul {
+    list-style: none;
+}
+.sale_realty2_menu ul li {
+    display: inline-block;
+    font-size: 13px;
+	margin-right: 5px;
+	color: #0099F
+}
+.sale_realty2_menu ul li a {
+	color: #62748F;
+}
+.sale_realty2_menu ul li a i {
+    margin-left: 2px;
+}
+
+.fixed_topbar_dropdown select {
+    width: 100%;
+    padding: 4px 7px;
+    border: none;
+    border-radius: 1px;
+}
+.fixed_topbar_dropdown {
+    font-size: 15px;
+    /* padding: 10px; */
+}
+
+.fixed_topbar {
+    padding: 14px 0px;
+    background-color: #0D9EE6;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.fixed_search {float: right;}
+
+.fixed_search input {
+    width: 544px;
+    height: 32px;
+    position: relative;
+    border-radius: 2px;
+    border: none;
+}
+
+.fixed_search i.fas {
+    position: absolute;
+    right: 26px;
+    top: 7px;
+    font-size: 18px;
+    color: #15A1E6;
+}
+.sale_realty2_title h6 {
+    font-weight: 500;
+    line-height: 24px;
+    color: #000;
+}
+.sale_realty2_title span {
+    color: #0D9EE6;
+    font-size: 27px;
+}
+
+.sale_realty_notice_area {
+    padding: 14px 0px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.sale_realty_notice_area_right p .blk_btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    background-color: #FD4F4E;
+	margin-left: 46px;
+	border-radius: 4px
+}
+.sale_realty_notice_area_report {
+    margin-top: 10px;
+    width: 176px;
+}
+.sale_realty_notice_area_report p {
+    float: left;
+    margin-right: 8px;
+    text-transform: capitalize;
+}
+.sale_realty_notice_area_report ul li {
+    display: inline-table;
+}
+.sale_realty_notice_area_report ul li a.report_view {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+}
+.sale_realty_notice_area_report ul li a {
+    font-size: 13px;
+    padding: 2px 3px;
+    color: #8F9EB6;
+    font-weight: 600;
+}
+.sale_realty_notice_area_left {
+    float: left;
+}
+.sale_realty_notice_area_right {
+    float: right;
+}
+.sale_realty_notice_area_left p a {
+    color: #666;
+    font-size: 15px;
+    font-weight: 500;
+}
+.sale_realty_notice_area_left p:hover a {
+    text-decoration: underline;
+}
+.sale_realty_notice_area_left p {
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 2px 0px;
+    font-weight: 500;
+}
+.sale_realty_notice_area_left p{}
+.sale_realty_notice_area_right p ul{}
+.sale_realty_notice_area_right p ul li {}
+.sale_realty_notice_area_right p ul li a{}
+.sale_realty_banner_right {
+    height: 381px;
+}
+.sale_realty_banner_right img {
+    height: 25%;
+}
+.sale_realty_banner_description {
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+.sale_realty_banner_description p {
+    font-size: 14px;
+    line-height: 29px;
+    color: #666;
+}
+.sale_realty_info{}
+.single_sale_realty_info ul {
+    list-style: none;
+    padding: 10px 13px;
+}
+.single_sale_realty_info ul li {
+    font-size: 14px;
+    padding-bottom: 7px;
+    font-weight: 500;
+    word-spacing: 2px;
+}
+.single_sale_realty_info.more_info ul {
+    display: inline-block;
+    width: 49%;
+}
+.address ul li {
+    display: inline-block;
+    margin-right: 62px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+.single_sale_realty_info h4 {
+    font-size: 15px;
+    text-transform: capitalize;
+    background-color: #F0F0F0;
+    padding: 14px 9px;
+    border-radius: 3px;
+}
+.single_sale_realty_info h4 ul{}
+.single_sale_realty_info h4 ul li{}
+.single_other_info img {
+    width: 124px;
+    border-radius: 3px;
+}
+.single_other_info {
+    padding: 11px 13px;
+	background-color: #F4F4F4;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+.single_other_info:nth-child(2n+1) {
+    background-color: #fff;
+}
+.single_other_info p a {
+    font-size: 14px;
+    color: #4296C7;
+    padding: 6px 0px;
+    display: block;
+    font-weight: 500;
+}
+.single_other_info p a:hover {
+    text-decoration: underline;
+}
+.single_other_info ul {
+    margin-top: 10px;
+}
+.single_other_info ul li {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+.single_other_info ul li a {
+    color: #000;
+}
+.single_other_info ul li a strong{
+	color: #0099FF
+}
+.sale_realty2_sidebar {
+    margin-top: 32px;
+}
+h4.single_realty2_sidebar_title {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.recommended .single_agent {
+    position: relative;
+}
+.recommended .single_agent i.fas.fa-chevron-left {
+    position: absolute;
+    top: 29%;
+    font-size: 21px;
+    left: 7px;
+    color: #fff;
+    z-index: 9;
+}
+.recommended .single_agent i.fas.fa-chevron-right {
+    position: absolute;
+    top: 29%;
+    font-size: 21px;
+    right: 7px;
+	color: #fff;
+	z-index: 9;
+}
+.recommended .single_agent p {
+    font-size: 15px;
+    color: #666;
+    padding: 14px;
+}
+
+.recommended:hover .single_agent img {
+    transform: scale(1.1);
+}
+
+.single_realty2_sidebar_img {
+    overflow: hidden;
+    position: relative;
+}
+.single_realty2_sidebar_img:before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #000;
+    opacity: .2;
+    z-index: 1;
+}
+.single_realty2_sidebar_img img {
+    transition: .6s;
+}
+.listings {
+    border: navajowhite;
+    height: 80px;
+    margin-bottom: 13px;
+}
+.single_realty2_sidebar a {
+	overflow: hidden;
+	display: block;
+}
+.single_realty2_sidebar_listings {
+	width: 50%;
+	float: left;
+	overflow: hidden;
+	border-radius: 7px;
+}
+.listings:hover .single_realty2_sidebar_listings img {
+    transform: scale(1.1);
+}
+.single_realty2_sidebar_listings img {
+    width: 100%;
+    transition: .6s;
+}
+.single_realty2_sidebar_list {
+    width: 50%;
+    float: right;
+    padding: 0px 10px;
+}
+.single_realty2_sidebar_list ul {
+	list-style: none;
+}
+.single_realty2_sidebar_list ul li span {
+    font-weight: 600;
+    color: #18A3E7;
+}
+.single_realty2_sidebar:hover .single_realty2_sidebar_list ul li {
+    color: #62C5F4;
+    text-decoration: underline;
+}
+.single_realty2_sidebar:hover .single_realty2_sidebar_list ul li:last-child {
+    text-decoration: none;
+}
+.single_realty2_sidebar_list ul li {
+    font-size: 13px;
+    display: block;
+    display: -webkit-box;
+    height: 42px;
+    font-size: 13px;
+    line-height: 20px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #62748F;
+    font-weight: 500;
+}
+
+/* ======================================Sale Realty(3) Page====================================== */
+.agent_info h4,.sale_realty3_sidebar h4 {
+    font-size: 17px;
+    text-transform: capitalize;
+    background-color: #F0F0F0;
+    padding: 12px;
+    color: #3A4659;
+    border-radius: 3px;
+}
+.agent-img {
+    height: 100%;
+}
+
+.agent-img img {
+    height: 100%;
+}
+.s_realt3_agent_details {
+    position: relative;
+}
+.aget_icons{
+    margin-top: 11px;
+}
+.s_realt3_agent_details .rating {
+    position: absolute;
+    right: -46px;
+    top: 57px;
+    width: 218px;
+}
+h5.agent_name {
+    padding: 0px 10px;
+    font-size: 21px;
+}
+
+.agent_info p {
+    padding: 0px 10px;
+}
+.agent_icon ul {
+    margin-bottom: 2px;
+}
+.agent_icon ul li {
+    position: relative;
+}
+
+.agent_icon {
+    overflow: hidden;
+    padding: 4px 37px;
+}
+
+.agent_icon ul li {
+    margin-left: 9px;
+    color: #797979;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.agent_icon ul li i.fas {
+    position: absolute;
+    left: -35px;
+    margin-right: 0px;
+    top: 4px;
+}
+
+.agent_icon ul li span {
+    margin-left: 0px;
+    margin-left: 10px;
+    color: #666;
+}
+.agent_intro h4 {
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #3A4659;
+}
+
+.agent_intro p {
+    font-size: 14px;
+    color: #666;
+    line-height: 26px;
+    margin-bottom: 12px;
+}
+p.border_btn {
+    text-align: right;
+}
+.sale_realty3_left.pagination_area ul li {
+    border: 1px solid #5BB7F2;
+    color: #0DA3EA;
+}
+
+ul.pagination_list._border_color {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 22px;
+}
+
+li.pagination_active {
+    background-color: #EEEEEE;
+}
+
+.sale_realty3_left { 
+}
+
+.sale_realty3_left.pagination_area {
+    padding-left: 0px;
+}
+.review_title {
+    float: left;
+}
+
+.review_right {
+    float: right;
+}
+
+.review_title i.fas {
+    float: left;
+    color: #2CB33C;
+    /* margin-right: 7px; */
+}
+
+.review_title p {
+    float: right;
+    margin-left: 6px;
+    font-size: 14px;
+    color: #000;
+}
+
+.review_rating {
+    /* margin: 25px 0px; */
+}
+
+.review_title p a {
+    color: #000;
+    font-size: 14px;
+    margin: 6px;
+    line-height: 0;
+}
+
+.review_title p a:hover {
+    color: #3EACE5;
+    text-decoration: underline;
+}
+
+.review_right i.fas {
+    color: #CACACA;
+}
+.single_reviews {
+    padding: 14px 0px;
+    border-bottom: 1px solid #ddd;
+}
+.single_reviews span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #606060;
+}
+p.single_reviews_pera {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 19px 0px;
+}
+
+.rating_item {
+    display: inline-block;
+    padding: 0px 32px;
+    width: 281px;
+}
+
+.rating_item:nth-child(1n+1) {
+    padding-left: 0px;
+}
+
+.rating_item i.fas {float: left;color: #2CB33C;font-size: 13px;}
+
+.rating_item p {
+    float: right;
+    margin-right: 65px;
+    font-size: 13px;
+}
+.fas.fa-chevron-up{display: none}
+.sale_realty3_sidebar {
+    margin-top: 59px;
+}
+.sale_realty3_sidebar h3 {
+    font-size: 18px;
+    padding: 4px 0px;
+}
+.sale_realty3_sidebar h3 {
+    font-size: 18px;
+    padding: 4px 0px;
+}
+
+.sale_realty3_sidebar_form input {
+    padding: 8px 9px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 1px;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    color: #ffffff94;
+}
+.sale_realty3_sidebar_form textarea {
+    padding: 10px 10px;
+	font-size: 14px;
+	border: 1px solid #ddd;
+}
+.sale_realty3_sidebar_form a.blk_btn {
+    display: block;
+    text-align: center;
+}
+.sale_realty3_sidebar p {
+    font-size: 13px;
+    line-height: 26px;
+    margin-top: 14px;
+}
+.sale_realty3_sidebar p span {
+    color: #0099FF;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 71%;
+    height: 3px;
+    border-radius: 5px;
+    background: #0D9EE6;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ddd;
+    border: 1px solid #0D9EE6;
+}
+.advance_search_input input {
+    width: 44%;
+    font-size: 13px;
+    height: 40px;
+    padding: 10px 9px;
+    border: 1px solid #56BBEE;
+    border-radius: 2px;
+}
+
+.advance_category {}
+
+.advance_category {
+    overflow: hidden;
+    margin: 20px 0px;
+}
+
+.single_drop_adcate {
+    display: inline-block;
+}
+
+.single_drop_adcate select {
+    width: 121px;
+    font-size: 13px;
+    padding: 7px 4px;
+    border: 1px solid #dadada;
+    color: #4c4c4c;
+}
+
+.advance_category input {
+    width: 207px;
+    padding: 3px 5px;
+    border: 1px solid #DADADA;
+}
+.advance_price_rang p {
+    margin-top: 0px;
+    font-size: 14px;
+}
+.advance_search {
+    margin-top: 0px;
+}
+.advance {
+    background-size: cover;
+    background-position: top center;
+    position: fixed;
+    left: 0;
+    top: 95px;
+    width: 50%;
+}
+.advance_menu_fixed {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 1px 1px 4px #ddd;
+}
+.advance iframe {
+    height: 100vh;
+}
+.sale_realty3_area.fix {
+    margin-top: 125px;
+}
+.ad_search_option {
+    margin: 28px 0px;
+}
+
+.ad_search_option a.blk_btn {
+    margin-top: 17px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.ad_search_option.check_box span {
+    font-size: 10px;
+}
+
+.ad_search_option .check_box span {
+    font-size: 15px;
+}
+.ad_search_option h4 {
+    font-size: 15px;
+}
+.advance_search .pagination_area {
+    padding: 0px 19px;
+    margin: 0px;
+}
+.advance_search .pagination_area ul.pagination_list._border_color {
+    padding: 0px;
+    border: none;
+}
+/* ==============================Find Agent Page============================================ */
+.pre_agent_area h4 {
+    text-align: left;
+    font-size: 18px;
+}
+.pre_agent_area h4 i {
+    margin-right: 7px;
+    color: #F67499;
+}
+.load_area {
+    padding: -12px;
+    margin: 0px auto;
+    text-align: center;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    border-radius: 50%;
+    border: 1px solid #0099FF;
+}
+/*=============================================== Check Button Page================================= */
+.check_banner_area {
+    background-image: url("../images/sale_checkbg1.png");
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+	z-index: 9;
+	margin-bottom: 244px;
+}
+
+.check_banner_area:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom left,#5cabd2, #45195a);
+    opacity: .7;
+    z-index: -1;
+}
+.c_banner_cont h1 {
+    text-align: center;
+    font-size: 42px;
+    padding: 101px 126px;
+    color: #fff;
+    line-height: 58px;
+}
+.c_banner_bottom img {
+	width: 57%;
+}
+.c_banner_bottom {
+    text-align: center;
+    position: absolute;
+    bottom: -323px;
+    z-index: 9;
+    width: 100%;
+}
+.slider_area h1 {
+    font-size: 41px;
+    text-align: center;
+    line-height: 67px;
+}
+
+.slider_area h1 span {
+    background-color: #1CB9FF;
+    color: #fff;
+}
+
+.slide_img {
+    float: left;
+}
+
+.slide {
+    padding: 33px 76px;
+	position: relative;
+	margin-top: 64px;
+}
+
+.slide_pera {
+    float: right;
+    padding: 50px 38px;
+}
+.slide_pera h3 {
+    font-size: 47px;
+    color: #ddd;
+}
+
+.slide_pera strong {
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.slide_pera h5 {
+    font-size: 22px;
+    color: #2D2D2D;
+    line-height: 37px;
+}
+
+.slide_pera p {
+    font-size: 16px;
+    color: #666;
+}
+
+.slide_dots {
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+}
+
+.slide_dots span i {
+    color: #1CB9FF;
+    cursor: pointer;
+}
+.check_banner2_area {
+    background-image: url("../images/banner2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 300px;
+	margin-top: 107px;
+}
+.check_banner2_area h1 {
+    padding: 92px 147px;
+    line-height: 58px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.check_banner2_area h1 span {
+    background-color: #1CB9FF;
+    color: #fff;
+}
+.unlimited_area {
+    padding-bottom: 85px;
+    border-bottom: 1px solid #ddd;
+}
+.unlimited_right {
+    padding: 51px 0px;
+}
+.unlimited_right span {
+    font-size: 16px;
+    display: block;
+    color: #8C8C8C;
+    padding: 22px 0px;
+}
+h2.u_section_title {
+    font-size: 45px;
+}
+.unlimited_right {
+    padding: 79px 0px;
+}
+.unlimited_right p {
+    color: #5B5B5B;
+    margin-top: 27px;
+    font-size: 23px;
+}
+.unlimited_right .blk_btn {
+    background-color: #FF477B;
+    border-radius: 7px;
+}
+.communicate_area {
+    border-bottom: 1px solid #ddd;
+}
+.communicate_left {
+    padding: 29px 0px;
+}
+.communicate_left h1 {
+    margin-bottom: 19px;
+}
+p.u_section_pera {
+    font-size: 21px;
+    line-height: 36px;
+    color: #5B5B5B;
+}
+a.blk_btn.general {
+    display: inline-block;
+    border-radius: 4px;
+	margin-top: 20px;
+    background-color: #0099FF;
+}
+a.blk_btn.premium {
+    background-color: #FF477B;
+    padding: 6px 28px;
+    border-radius: 4px;
+}
+.stat_right.unlimited_right {
+    padding: 0px 0px;
+}
+p.u_section_pera span {
+    color: #5B5B5B;
+    font-weight: 500;
+    margin-right: 5px;
+}
+.stat_right p {
+    font-size: 21px;
+    line-height: 41px;
+}
+.stat_area {
+    border-bottom: 1px solid #ddd;
+}
+.discount_right {
+    padding: 0px;
+}
+
+.discount_right p {
+    font-size: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #A1A1B6;
+    margin-bottom: 16px;
+}
+
+h2.kate_title {
+    font-size: 24px;
+    color: #F89828;
+}
+
+.kate_area ul li {
+    position: relative;
+    border-bottom: none;
+}
+
+.kate_area ul li i {
+    position: absolute;
+    left: -30px;
+    top: 9px;
+    color: #F89828;
+}
+
+.kate_area {
+}
+
+.kate_area ul {
+    padding: 0px 35px;
+}
+
+.kate_area ul li p {
+    border-bottom: navajowhite;
+    margin-bottom: -5px;
+    padding-bottom: 0px;
+}
+
+.kate_area a.blk_btn {
+    margin-top: 13px;
+    display: inline-block;
+}
+
+.discount_right a.blk_btn.premium {
+    margin-top: 14px;
+    display: inline-block;
+    margin-left: 14px;
+}
+.pricing_area {
+    background-color: #F2F4F6;
+    padding: 75px 0px;
+}
+
+.pricing_area h2 {
+    text-align: center;
+    color: #1F1F1F;
+    font-size: 50px;
+}
+
+.p_general_agent h4 {
+    text-align: left;
+    font-size: 24px;
+}
+
+.p_general_agent h4 i {
+    color: #0D9EE6;
+    margin-right: 6px;
+}
+
+.p_benefit h4 {
+    float: left;
+    text-transform: capitalize;
+    font-size: 22px;
+}
+
+.p_benefit {
+    width: 572px;
+    overflow: hidden;
+}
+
+.p_benefit ul {
+    float: right;
+}
+.p_benefit ul li {
+    display: inline-block;
+}
+.p_benefit ul li a i {
+    margin-right: 5px;
+}
+.p_benefit ul li a {
+    font-size: 14px;
+    padding: 7px 12px;
+    background-color: #FFE;
+    border-radius: 8%;
+    display: block;
+	margin-right: 12px;
+	box-shadow: 1px 3px 14px 1px #ddd;
+}
+.p_free_pass.fix {
+    padding: 53px 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 8px 5px 12px 5px #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.free_title {
+    float: left;
+}
+.free_right {
+    float: right;
+}
+.free_title h3 {
+    font-size: 25px;
+    color: #000;
+    text-transform: capitalize;
+}
+.free_title h3 i {
+    color: #757575;
+    margin-right: 6px;
+}
+.free_right del {
+    font-size: 23px;
+    color: tomato;
+    margin-right: 13px;
+}
+.free_right span {
+    font-size: 26px;
+    color: #000;
+    font-weight: 500;
+}
+.free_right {}
+.free_right a.blk_btn {
+    padding: 17px 13px;
+    font-size: 16px;
+}
+.free_right a.blk_btn:hover {
+    background-color: #0779B7;
+}
+.p_benefit.p_premium.fix {
+    width: 100%;
+    margin-bottom: 26px;
+}
+.p_general_agent span {
+    font-size: 13px;
+    color: #999;
+}
+.c_footer_Area {
+    margin: 0px;
+}
+/* ================================Job Search Page========================================== */
+.job_mainmenu {
+    padding: 0px;
+    border-bottom: navajowhite;
+}
+.job_platinum_area{
+    background-color: #F6F7F8;
+    padding-top: 100px;
+}
+.job_search input {
+    margin-top: 16px;
+}
+.job_search i {
+    top: 17px;
+}
+.job_mainmenu {
+    padding: 0px;
+    border-bottom: none;
+}
+.job_banner_area {
+    background-image: url(../images/search-bg.png);
+    position: relative;
+	z-index: 9;
+	background-repeat: no-repeat;
+}
+.job_banner_area:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .2;
+    z-index: -1;
+}
+.job_search_cont {
+    text-align: center;
+    width: 692px;
+    margin: 0px auto;
+	padding: 50px 0px;
+}
+
+.job_search_cont {}
+.single_drop_job_search {
+    float: left;
+    width: 158px;
+    margin-right: 11px;
+}
+.job_search_cont h2 {
+    font-size: 29px;
+    color: #fff;
+    word-spacing: 2px;
+}
+.job_search_cont p {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.single_drop_job_search select {
+    width: 100%;
+    height: 33px;
+    font-size: 13px;
+    padding: 6px 13px;
+    border: navajowhite;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.single_drop_job_search select option {color: #000;background-color: transparent;}
+.job_search_cont input {
+	width: 173px;
+	float: left;
+    margin-right: 12px;
+    padding: 2px 10px;
+    background-color: transparent;
+    border: navajowhite;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    height: 32px;
+    color: #fff;
+}
+.job_search_cont a.blk_btn {
+    padding: 4px 37px;
+    display: inline-block;
+}
+.job_sub_menu {
+    margin-top: 21px;
+}
+.job_sub_menu ul {
+    text-align: left;
+}
+.job_platinum_area h4 {
+    margin-bottom: 21px;
+}
+.job_sub_menu ul li a {
+    font-size: 15px;
+    padding: 8px 11px;
+    background-color: #000;
+    opacity: .7;
+    color: #fff;
+    border: 1px dashed #fff;
+}
+.job_sub_menu ul li {
+}
+.job_sub_menu {
+    margin-top: 43px;
+}
+.job_banner_top {
+    overflow: hidden;
+}
+.job_banner_top ul li {
+    display: inline-block;
+    padding: 8px 10px;
+    background-color: #F5F5F5;
+    margin-top: 1px;
+    font-size: 12px;
+    border-radius: 2px;
+    color: #666666;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.job_banner_top ul {
+     padding: 0px 120px;
+}
+.job_mainmenu ul {
+    margin-top: 9px;
+    padding: 0px;
+}
+.job_details {
+    margin-top: 11px;
+}
+.job_banner_top ul li.active {
+    background-color: #4299FF;
+    color: #fff;
+}
+h5.card-title {
+    border-bottom: 1px solid #ddd;
+}
+.job_single_platinum {
+	margin-bottom: 18px;
+}
+.job_single_platinum .card-body img {
+    border-bottom: 1px solid #ddd;
+}
+.job_single_platinum .card-body h6 {
+    font-size: 12px;
+    color: #333;
+}
+.job_single_platinum .card-body p {color: #000;font-weight: 500;font-size: 14px;}
+.job_single_platinum a.card-link {
+    font-size: 12px;
+    float: left;
+    margin-top: 18px;
+}
+.job_single_platinum a.card-link i.far {
+    margin-left: 45px;
+    color: #666;
+    font-size: 15px;
+}
+.job_type_area {
+    padding: 65px 0px;
+    background-color: #F6F7F8;
+}
+.single_job_type span {
+	float: left;
+	color: #fff;
+    margin-right: 11px;
+}
+.single_job_type span a {
+    color: #fff;
+}
+.single_job_type {
+    text-align: center;
+    padding: 15px 59px;
+    background-color: #4A5470;
+    overflow: hidden;
+}
+.job_footer_Area {
+    margin-top: 0px;
+    padding: 30px 0px;
+    background-color: #FAFAFA;
+}
+/* ======================================Real Blog Page===================================== */
+.blog_banner_sale_cont {
+    position: absolute;
+    top: 169px;
+    width: 100%;
+}
+.banner_map {
+    position: relative;
+}
+.blog_title {
+    float: left;
+}
+
+.blog_social {
+    float: right;
+}
+
+.blog_social ul li {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.blog_social ul li a {
+    position: 1;
+    padding: 9px 3px;
+    color: #2b293796;
+}
+.blog_social ul li a:hover {
+    color: #0DA0E0;
+}
+.blog_top.fix {
+    margin-bottom: 28px;
+}
+.blog_title span {
+    font-size: 13px;
+    color: #666;
+}
+.blog_banner2_area {
+	text-align: center;
+	margin-bottom: 65px;
+}
+.blog_banner2_area p {
+    font-size: 23px;
+    word-spacing: 2px;
+    line-height: 44px;
+    color: #1F1F1F;
+    font-weight: 500;
+}
+.blog_banner2_area img {
+    margin-bottom: 23px;
+}
+.single_real_blog img {
+    width: 62%;
+}
+.single_real_blog {
+    text-align: center;
+    margin-bottom: 33px;
+    border-top: 1px solid #ddd;
+    padding: 41px 0px;
+}
+.single_real_blog h2 {
+    font-size: 21px;
+    margin-bottom: 19px;
+    color: #000;
+    word-spacing: 1px;
+}
+.welcome_message {
+    text-align: center;
+}
+.welcome_message p {
+    font-size: 15px;
+    line-height: 32px;
+}
+.general_info {
+    border-top: 2px solid #000;
+    padding: 26px 36px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 67px;
+}
+
+.general_info_left {
+    float: left;
+}
+
+.general_info_top.fix {
+    padding: 18px 3px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 18px;
+}
+
+.general_info_left h4 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    padding: 8px 0px;
+}
+
+.general_info_right {
+    float: right;
+}
+
+.general_info_left h6 {}
+
+.general_info_left span {
+    font-size: 17px;
+    padding: 0px 8px;
+    border: 1px solid #FFB500;
+    color: #FFB500;
+}
+
+.general_info_left p {
+    margin-top: 11px;
+    font-size: 15px;
+    color: #BABABA;
+}
+
+.general_info_bottom {
+    overflow: hidden;
+}
+
+.single_info {
+    float: left;
+    padding: 22px 34px;
+    /* text-align: center; */
+    position: relative;
+    width: 345px;
+}
+
+.single_info h3 {
+    font-size: 17px;
+    color: #000;
+    font-weight: 500;
+}
+.single_info p {
+    font-size: 13px;
+}
+.single_info ul {
+    list-style: disc;
+}
+.single_info ul li {
+    font-size: 13px;
+    margin-bottom: 11px;
+}
+.single_info p:before {
+    position: absolute;
+    content: '';
+    top: 56px;
+    left: 24px;
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+}
+.company_details_left {
+    padding: 31px 28px;
+    border-top: 2px solid #000;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 100%;
+}
+.company_details_left span {
+    font-size: 13px;
+    color: #a8a8a9;
+}
+
+.single_company_details h3 {
+    font-size: 19px;
+    color: #000;
+    /* margin: 12px 0px; */
+}
+
+.single_company_details {
+    padding: 20px 5px;
+}
+
+.single_company_details p {
+    color: #666;
+}
+
+.single_company_details h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.single_company_details p {
+    font-size: 15px;
+    line-height: 63px;
+}
+
+.single_company_details p span {
+    margin-left: 12px;
+    color: #21A8E7;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.company_details_right h3 {
+    font-size: 19px;
+    padding: 14px 0px;
+}
+.company_details_right table th {
+    font-size: 13px;
+    color: #777;
+}
+.company_details_right table td {
+    padding: 10px 20px 13px 45px;
+    font-size: 13px;
+}
+.company_details_right {
+    padding: 23px 28px;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #ddd;
+    height: 100%;
+}
+.company_details_area {
+    margin-bottom: 100px;
+}
+.company_details_reception {
+    margin-top: 26px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 27px;
+}
+.company_details_reception p {
+    font-size: 12px;
+}
+.company_details_reception h2 {
+    font-size: 13px;
+}
+.company_details_reception a.blk_btn {
+    margin-top: 9px;
+    display: inline-block;
+}
+.register{border: none}
+/* =======================================Company Details Page====================================== */
+.job_company_area {
+    background-image: url("../images/company-banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 51px 0px;
+}
+.c_banner_left {
+    width: 200px;
+    float: left;
+    border: 7px solid #fff;
+}
+.c_banner_right {
+    float: right;
+    padding-top: 27px;
+}
+.c_banner_content {
+    width: 566px;
+    color: #fff;
+}
+
+.c_banner_right p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 40px;
+}
+.c_banner_right p span {
+    padding: 4px 8px;
+    background-color: #19A4E5;
+    border-radius: 6px;
+}
+.c_banner_right p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 40px;
+}
+.c_banner_right p span {
+    padding: 4px 8px;
+    background-color: #19A4E5;
+    border-radius: 6px;
+}
+.single_c_details {
+    overflow: hidden;
+    padding: 17px 17px;
+    border: 1px solid #ddd;
+}
+.single_c h3 {
+    font-size: 20px;
+}
+.single_item_c {
+    float: left;
+    width: 39%;
+    font-size: 15px;
+    margin-bottom: 14px;
+    margin-right: 111px;
+    font-size: 13px;
+}
+
+span.c_title {
+    float: left;
+    width: 27%;
+    color: #666;
+}
+span.c_name {
+    float: right;
+    text-align: left;
+    width: 50%;
+    padding: 0ppx 21px;
+    margin-left: 18px;
+}
+.single_c ul {
+    padding: 32px 20px;
+    border: 1px solid #ddd;
+}
+.single_c ul li a {
+    font-size: 13px;
+    padding: 13px 0px;
+    margin-bottom: -4px;
+    display: block;
+}
+.company_social span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+.company_social {
+    padding: 15px 10px;
+    border: 1px solid #ddd;
+}
+.single_c {
+    margin-left: 22px;
+    margin-bottom: 48px;
+}
+.single_c h3 {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 23px;
+}
+.top_news_area.company_photo.fix {
+    width: 100%;
+    position: relative;
+    padding: 28px 71px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+.top_news_area.company_photo span i.fas.fa-chevron-left {
+    top: 42%;
+    z-index: 9999;
+    left: 19px;
+}
+.top_news_area.company_photo span i.fas.fa-chevron-right {
+    top: 42%;
+    z-index: 9999;
+    right: 19px;
+}
+.single_c table th {
+    text-align: center;
+    font-size: 17px;
+    color: #666;
+    font-weight: 500;
+    padding: 7px 0px;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #ddd;
+}
+.single_c table td {
+    font-size: 14px;
+    padding: 21px;
+    text-align: center;
+}
+.single_c table tr {
+    border-bottom: 1px solid #ddd;
+}
+.single_c table td span {
+    background-color: #19A4E5;
+    color: #fff;
+    padding: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.company_details {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* =========================Job Category Page============================== */
+
+.jobsearch_category_right{
+	background-color: transparent;
+}
+.jobsearch_category_area{
+	background-color:#F6F7F8;
+	padding: 20px 0px;
+}
+
+.jobsearch_login{
+	background-color:#FCFCFC;
+
+}
+.jobsearch_login h3 {
+    font-size: 18px;
+    text-align: center;
+    padding: 48px 10px;
+}
+.jobsearch_login span{
+	padding:10px;
+	border-top: 1px solid #ddd;
+	display: block;
+}
+
+.jobsearch_category_title {
+    font-size: 15px;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 10px 8px;
+    background-color: #fff;
+    border-right: 0px;
+    display: block;
+    width: 14em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.jobsearch_category_title::focus{
+	background-color:#445D9E;
+}
+
+.jobsearch_category_list {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    overflow-y: scroll;
+    height: 200px;
+}
+.jobsearch_category_list li a {
+    padding: 8px 10px;
+    display: block;
+    font-size: 13px;
+    color:#222;
+    transition: .5s;
+}
+.jobsearch_category_list li a:hover{
+	color:#0099ff;
+}
+.jobsearch_category_list li i {
+    position: absolute;
+    right: 15px;
+    line-height: 27px;
+    font-size: 13px;
+}
+.single_job_details h3 {
+    font-size: 14px;
+    font-weight: 600;
+    font-size: 13px;
+}
+.single_job_details ul li {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 5px;
+    border-right: 1px solid #ddd;
+}
+.single_job_details ul li:last-child {
+    border-right: 0px;
+}
+.job_premium_area {
+    background-color: #F6F7F8;
+}
+.single_job_details img {
+    border-right: 1px solid #ddd;
+}
+.single_job_premium {
+    padding: 30px 14px;
+    border: 1px solid #ddd;
+    margin-bottom: 14px;
+    background-color: #fff
+}
+.single_job_details p {
+    font-size: 14px;
+    padding-top: 10px;
+}
+.single_job_details i {
+    margin-left: 7px;
+    color: #ddd;
+}
+
+.single_job_details i:hover {
+    color: tomato;
+}
+.single_job_details span {
+    font-size: 12px;
+}
+.all_job_menu a.border_btn {
+    display: inline-block;
+    padding: 11px 15px;
+    color: #666;
+    border: 1px solid #ddd;
+}
+.all_job_menu {
+    margin-bottom: 16px;
+    margin-left: 23px;
 }
 
 
@@ -2133,8 +4824,6 @@ a.red_btn:hover {
 }
 
 
-
-
 .jobsearch_category_title {
     font-size: 15px;
     border: 1px solid #ddd;
@@ -2158,6 +4847,7 @@ a.red_btn:hover {
     background-color: #fff;
     overflow-y: scroll;
     height: 200px;
+    margin-bottom: 20px;
 }
 .jobsearch_category_list li a {
     padding: 8px 10px;
@@ -2175,9 +4865,6 @@ a.red_btn:hover {
     line-height: 27px;
     font-size: 13px;
 }
-
-
-
 
 .js_category_list_bottom {
     border-left: 1px solid #ddd;
@@ -2201,3 +4888,4 @@ a.cross{
 .js_search{
 	float: right;
 }
+
